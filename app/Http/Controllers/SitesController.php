@@ -6,6 +6,19 @@ use Illuminate\Http\Request;
 
 class SitesController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +26,7 @@ class SitesController extends Controller
      */
     public function index()
     {
-        //
+        return view('sites.index');
     }
 
     /**
