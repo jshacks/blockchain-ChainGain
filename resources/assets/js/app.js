@@ -19,6 +19,7 @@ Vue.component('sites-list', require('./components/sites/ListingComponent.vue'));
 Vue.component('sites-add', require('./components/sites/AddComponent.vue'));
 
 Vue.component('authors', require('./components/authors/Authors.vue'));
+Vue.component('dashboard', require('./components/Dashboard.vue'));
 Vue.component('authors-add', require('./components/authors/AddAuthorComponent.vue'));
 Vue.component('authors-list', require('./components/authors/AuthorListingComponent.vue'));
 

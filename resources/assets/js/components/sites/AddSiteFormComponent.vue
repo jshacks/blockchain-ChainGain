@@ -22,8 +22,8 @@
                 </div>
             </div>
             <div v-if="type=='author'" class="form-group">
-                <label>Adress</label>
-                <input type="text" placeholder="Adress" v-model="model.adress"  name="adress"/>
+                <label>Address</label>
+                <input type="text" placeholder="Address" v-model="model.address"  name="address"/>
             </div>
             <div v-if="type=='author'" class="form-group">
                 <label>Percentage</label>

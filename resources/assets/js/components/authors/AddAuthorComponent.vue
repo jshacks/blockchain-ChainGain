@@ -31,7 +31,7 @@ export default {
             isOpened: false,
             model: {
                 name:"",
-                adress: "",
+                address: "",
                 percentage:"",
             }
         }

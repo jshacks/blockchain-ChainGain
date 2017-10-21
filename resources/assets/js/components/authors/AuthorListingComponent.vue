@@ -6,7 +6,7 @@
                     <tr>
                       <th>#</th>
                       <th>Name</th>
-                      <th>Adress</th>
+                      <th>Address</th>
                       <th>Percentage</th>
                     </tr>
                   </thead>
@@ -14,7 +14,7 @@
                     <tr v-for="author in authors">
                       <td>{{ author.id }}</td>
                       <td>{{ author.name }}</td>
-                      <td>{{ author.adress }}</td>
+                      <td>{{ author.address }}</td>
                       <td>{{ author.percentage }}</td>
                       <td><button class="btn btn-xs btn-primary btn-block">Edit</button></td>
                     </tr>
