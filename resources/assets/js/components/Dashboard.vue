@@ -46,7 +46,7 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <chart name="Sites Revenue" :labels="labels1" color="#f97978" :data="data1"></chart>
+            <pie name="Sites Revenue" :labels="labels1" :colors="colors" :data="data1"></pie>
         </div>
         <div class="col-md-4">
             <chart name="Authors Revenue" :labels="labels2" color="#7886f9" :data="data2"></chart>
@@ -81,7 +81,7 @@ export default {
             data3:[45,55,77,34],
             data1:[32,13,99,123],
             data2:[123,232,123,55,56,3],
-
+            colors:["#f97978","#7886f9", "#eff978"]
         }
     },
     computed: {

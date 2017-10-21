@@ -1416,6 +1416,7 @@ Vue.component('authors-list', __webpack_require__(73));
 Vue.component('sites-add-form', __webpack_require__(61));
 
 Vue.component('chart', __webpack_require__(84));
+Vue.component('pie', __webpack_require__(312));
 var app = new Vue({
   el: '#app'
 });
@@ -44610,8 +44611,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             labels2: ["Ion", "Dan", "Stefan", "Adrian", "Gigi", "Vali"],
             data3: [45, 55, 77, 34],
             data1: [32, 13, 99, 123],
-            data2: [123, 232, 123, 55, 56, 3]
-
+            data2: [123, 232, 123, 55, 56, 3],
+            colors: ["#f97978", "#7886f9", "#eff978"]
         };
     },
     computed: {},
@@ -44702,11 +44703,11 @@ var render = function() {
         "div",
         { staticClass: "col-md-4" },
         [
-          _c("chart", {
+          _c("pie", {
             attrs: {
               name: "Sites Revenue",
               labels: _vm.labels1,
-              color: "#f97978",
+              colors: _vm.colors,
               data: _vm.data1
             }
           })
@@ -78825,6 +78826,80 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       datasets: [{
         label: this.name,
         backgroundColor: this.color,
+        data: this.data
+      }]
+    });
+  }
+});
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(313)
+/* template */
+var __vue_template__ = null
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/dashboard/Pie.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-98ddd14e", Component.options)
+  } else {
+    hotAPI.reload("data-v-98ddd14e", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 313 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
+// MonthlyIncome.vue
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  extends: __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Pie"],
+  props: ['name', 'labels', 'colors', 'data'],
+  mounted: function mounted() {
+    this.renderChart({
+      labels: this.labels,
+      datasets: [{
+        label: this.name,
+        backgroundColor: this.colors,
         data: this.data
       }]
     });
