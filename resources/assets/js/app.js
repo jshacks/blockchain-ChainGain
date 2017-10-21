@@ -25,6 +25,8 @@ Vue.component('authors-list', require('./components/authors/AuthorListingCompone
 
 Vue.component('sites-add-form', require('./components/sites/AddSiteFormComponent.vue'));
 
+
+Vue.component('chart', require('./components/dashboard/Chart.vue'));
 const app = new Vue({
     el: '#app'
 });
