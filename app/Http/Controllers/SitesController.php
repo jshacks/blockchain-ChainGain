@@ -3,17 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Site;
+use App\User;
 
 class SitesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        // $user = $request->user();
+        // $user->sites()->create(['name' => 'New Site']);
+
+        $sites = Site::all();
+
+        return view('sites.index', ['sites' => $sites]);
     }
 
     /**
@@ -34,7 +46,11 @@ class SitesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = $request->user();
+        dd($user);
+        return response()->json(['hey']);
+        $user->sites()->create(['name' => $request->input('name')]);
+        return [ 'success' => true ];
     }
 
     /**
