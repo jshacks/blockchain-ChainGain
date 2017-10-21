@@ -32,6 +32,7 @@ export default {
             model: {
                 name:"",
                 adress: "",
+                percentage:"",
             }
         }
     },

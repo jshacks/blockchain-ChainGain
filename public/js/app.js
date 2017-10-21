@@ -43646,7 +43646,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             isOpened: false,
             model: {
                 name: "",
-                adress: ""
+                adress: "",
+                percentage: ""
             }
         };
     },
@@ -43826,6 +43827,10 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -44066,6 +44071,37 @@ var render = function() {
                   }
                 })
               ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.type == "author"
+            ? _c("div", { staticClass: "form-group" }, [
+                _c("label", [_vm._v("Percentage")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.model.percentage,
+                      expression: "model.percentage"
+                    }
+                  ],
+                  attrs: {
+                    type: "text",
+                    placeholder: "Percentage",
+                    name: "percentage"
+                  },
+                  domProps: { value: _vm.model.percentage },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.model, "percentage", $event.target.value)
+                    }
+                  }
+                })
+              ])
             : _vm._e()
         ]),
         _vm._v(" "),
@@ -44195,6 +44231,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -44229,6 +44267,8 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(author.adress))]),
               _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(author.percentage))]),
+              _vm._v(" "),
               _vm._m(1, true)
             ])
           })
@@ -44248,7 +44288,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Adress")])
+        _c("th", [_vm._v("Adress")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Percentage")])
       ])
     ])
   },
