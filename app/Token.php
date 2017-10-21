@@ -6,17 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Token extends Model
 {
-    protected $fields = [
+    protected $fillable = [
         'value',
     ];
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->morphTo(User::class);
     }
 
     public function site()
     {
-        return $this->hasOne(Site::class);
+        return $this->morphTo(Site::class);
     }
 }

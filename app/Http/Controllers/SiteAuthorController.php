@@ -52,6 +52,7 @@ class SiteAuthorController extends Controller
             'address' => $request->input('address'),
             'percentage' => $request->input('percentage'),
         ]);
+        $author->generateToken();
         return response()->json(['success' => true, 'author' => $author]);
     }
 
@@ -61,9 +62,9 @@ class SiteAuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Site $site, Author $author)
     {
-        //
+        return view('authors.show', ['author' => $author]);
     }
 
     /**
