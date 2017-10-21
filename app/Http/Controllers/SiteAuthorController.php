@@ -49,8 +49,8 @@ class SiteAuthorController extends Controller
      */
     public function store(Site $site, Request $request)
     {
-        $site->authors()->create(['name' => $request->input('name')]);
-        return response()->json(['success' => true]);
+        $author = $site->authors()->create(['name' => $request->input('name')]);
+        return response()->json(['success' => true, 'author' => $author]);
     }
 
     /**
