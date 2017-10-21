@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Site;
 use App\User;
 
-class SitesController extends Controller
+class SiteController extends Controller
 {
 
     public function __construct()
@@ -23,7 +23,7 @@ class SitesController extends Controller
         // $user = $request->user();
         // $user->sites()->create(['name' => 'New Site']);
 
-        $sites = Site::all();
+        $sites = Site::with('authors')->get();
 
         return view('sites.index', ['sites' => $sites]);
     }
@@ -46,11 +46,13 @@ class SitesController extends Controller
      */
     public function store(Request $request)
     {
+
         $user = $request->user();
-        dd($user);
-        return response()->json(['hey']);
-        $user->sites()->create(['name' => $request->input('name')]);
-        return [ 'success' => true ];
+        $site = $user->sites()->create([
+            'name' => $request->input('name'),
+            'currency' => $request->input('currency')
+        ]);
+        return [ 'success' => true, 'data' => $site ];
     }
 
     /**
@@ -59,9 +61,10 @@ class SitesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Site $site)
     {
-        //
+        // dd($site);
+        return view('sites.show', ['site' => $site]);
     }
 
     /**
