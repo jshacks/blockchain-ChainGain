@@ -32,13 +32,8 @@
         mounted() {
             console.log('Component mounted.')
         },
-        computed: {
-          sites () {
-            return [
-                {"id":1,"name": "xxx.com", "currency": "Monero", "earnings":"400$", "authors": 4},
-                {"id":2,"name": "yyy.com", "currency": "Etherum", "earnings":"200$", "authors": 2},
-            ]
-          }
-        },
+        props:{
+          sites: {},
+        }
     }
 </script>

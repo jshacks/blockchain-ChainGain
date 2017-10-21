@@ -20,9 +20,6 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
-        // $user = $request->user();
-        // $user->sites()->create(['name' => 'New Site']);
-
         $sites = Site::with('authors')->get();
 
         return view('sites.index', ['sites' => $sites]);
