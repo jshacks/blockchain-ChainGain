@@ -43166,7 +43166,10 @@ var render = function() {
               _c("td", [
                 site.currency == 0 ? _c("span", [_vm._v("Monero")]) : _vm._e(),
                 site.currency == 1 ? _c("span", [_vm._v("Dash")]) : _vm._e(),
-                site.currency == 2 ? _c("span", [_vm._v("Etherum")]) : _vm._e()
+                site.currency == 2 ? _c("span", [_vm._v("Etherum")]) : _vm._e(),
+                site.currency == 3
+                  ? _c("span", [_vm._v("ChainGain")])
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(site.earnings))]),
@@ -43863,6 +43866,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['model', 'type', 'isEditing'],
@@ -44000,6 +44006,32 @@ var render = function() {
                       }
                     }),
                     _vm._v("Etherum")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "radio" }, [
+                  _c("label", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.model.currency,
+                          expression: "model.currency"
+                        }
+                      ],
+                      attrs: { type: "radio", name: "currency" },
+                      domProps: {
+                        value: 3,
+                        checked: _vm._q(_vm.model.currency, 3)
+                      },
+                      on: {
+                        change: function($event) {
+                          _vm.$set(_vm.model, "currency", 3)
+                        }
+                      }
+                    }),
+                    _vm._v("ChainGain")
                   ])
                 ])
               ])

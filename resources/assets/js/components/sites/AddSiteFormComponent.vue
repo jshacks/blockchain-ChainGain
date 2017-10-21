@@ -17,6 +17,9 @@
                 <div class="radio">
                   <label><input type="radio" v-model="model.currency" v-bind:value="2" name="currency">Etherum</label>
                 </div>
+                <div class="radio">
+                  <label><input type="radio" v-model="model.currency" v-bind:value="3" name="currency">ChainGain</label>
+                </div>
             </div>
             <div v-if="type=='author'" class="form-group">
                 <label>Adress</label>
