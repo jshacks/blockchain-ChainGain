@@ -1,17 +1,17 @@
 <template>
 <div class="modal-open">
-    <button v-on:click="openModal()" class="btn btn-xs btn-primary pull-right">Add Site</button>
+    <button v-on:click="openModal()" class="btn btn-xs btn-primary pull-right">Add Author</button>
     <!-- Modal -->
     <div v-if="isOpened" class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document" style="margin-top:90px;">
             <div class="modal-content">
                 <div class="modal-header">
-                   <h5 class="modal-title">Add Site</h5>
+                   <h5 class="modal-title">Add Author</h5>
                    <button v-on:click="closeModal()" type="button" class="close" style="margin-top:-25px;">
                      <span aria-hidden="true">&times;</span>
                    </button>
                  </div>
-                <sites-add-form @save-product="addSite" :model="model" type="site"></sites-add-form>
+                <sites-add-form @save-product="addAuthor" :model="model" type="author"></sites-add-form>
             </div>
         </div>
     </div>
@@ -25,28 +25,27 @@ export default {
     mounted() {
         console.log('Component mounted.')
     },
+    props: ['id'],
     data: function() {
         return {
             isOpened: false,
             model: {
                 name:"",
-                currency: 0,
+                adress: "",
             }
         }
     },
     methods: {
         openModal: function() {
             this.isOpened = !this.isOpened;
-            console.log(this.isOpened)
         },
         closeModal: function() {
             this.isOpened = !this.isOpened;
-            console.log(this.isOpened)
         },
-        addSite: function (model) {
-          console.log('model', model);
-          axios.post('/sites', model).then(response => {
-            console.log(response);
+        addAuthor: function (model) {
+          axios.post('/sites/'+this.id+'/authors', model).then(response => {
+            this.closeModal();
+            this.$emit('saved-author', model)
           })
         }
     }

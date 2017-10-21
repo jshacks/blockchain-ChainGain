@@ -17,7 +17,13 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('sites-list', require('./components/sites/ListingComponent.vue'));
 Vue.component('sites-add', require('./components/sites/AddComponent.vue'));
+
+Vue.component('authors', require('./components/authors/Authors.vue'));
+Vue.component('authors-add', require('./components/authors/AddAuthorComponent.vue'));
+Vue.component('authors-list', require('./components/authors/AuthorListingComponent.vue'));
+
 Vue.component('sites-add-form', require('./components/sites/AddSiteFormComponent.vue'));
+
 const app = new Vue({
     el: '#app'
 });
