@@ -44,9 +44,8 @@ export default {
             console.log(this.isOpened)
         },
         addSite: function (model) {
-          console.log('model', model);
           axios.post('/sites', model).then(response => {
-            console.log(response);
+            window.location.href=  '/sites/' + response.data.data.id;
           })
         }
     }

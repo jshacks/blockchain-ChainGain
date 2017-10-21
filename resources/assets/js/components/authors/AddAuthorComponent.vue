@@ -45,7 +45,7 @@ export default {
         addAuthor: function (model) {
           axios.post('/sites/'+this.id+'/authors', model).then(response => {
             this.closeModal();
-            this.$emit('saved-author', model)
+            this.$emit('saved-author', response.data.author)
           })
         }
     }

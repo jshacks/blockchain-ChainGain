@@ -43398,9 +43398,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log(this.isOpened);
         },
         addSite: function addSite(model) {
-            console.log('model', model);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/sites', model).then(function (response) {
-                console.log(response);
+                window.location.href = '/sites/' + response.data.data.id;
             });
         }
     }
@@ -43657,7 +43656,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/sites/' + this.id + '/authors', model).then(function (response) {
                 _this.closeModal();
-                _this.$emit('saved-author', model);
+                _this.$emit('saved-author', response.data.author);
             });
         }
     }
