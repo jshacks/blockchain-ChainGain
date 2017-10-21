@@ -65,12 +65,17 @@ import {
 } from 'vue-chartjs'
 export default {
     mounted() {
-        console.log('Dashboard Component mounted.')
+        console.log('Dashboard Component mounted.');
+        axios.get('/dashboard/data').then(response => {
+            let data = response.data;
+            this.revenue = data.revenue;
+            this.hashrate = data.hashrate;
+        })
     },
     data: function() {
         return {
-            revenue: 2032,
-            hashrate: "45",
+            revenue: "",
+            hashrate: "",
             paid: 500,
             nr: 50,
             authorsPaid: 1250,
