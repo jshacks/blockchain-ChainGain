@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     protected $fillable = [
-        'name'
+        'name',
+        'adress',
+        'percentage',
     ];
 
     protected $rules = [
-        'name' => 'required|unique|min:2'
+        'name' => 'required|unique|min:2',
+        'address' => 'text',
+        'percentage' => 'float',
     ];
 
     public function site()
