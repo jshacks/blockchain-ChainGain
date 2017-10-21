@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+
+    use \App\Traits\TokenableTrait;
+
     protected $fillable = [
         'name',
-        'adress',
+        'address',
         'percentage',
     ];
 
