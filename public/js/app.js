@@ -43163,7 +43163,11 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(site.name))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(site.currency))]),
+              _c("td", [
+                site.currency == 0 ? _c("span", [_vm._v("Monero")]) : _vm._e(),
+                site.currency == 1 ? _c("span", [_vm._v("Dash")]) : _vm._e(),
+                site.currency == 2 ? _c("span", [_vm._v("Etherum")]) : _vm._e()
+              ]),
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(site.earnings))]),
               _vm._v(" "),
@@ -43851,6 +43855,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['model', 'type', 'isEditing'],
@@ -43913,30 +43925,83 @@ var render = function() {
             ? _c("div", { staticClass: "form-group" }, [
                 _c("label", [_vm._v("Currency")]),
                 _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.model.currency,
-                      expression: "model.currency"
-                    }
-                  ],
-                  attrs: {
-                    type: "text",
-                    placeholder: "Currency",
-                    name: "currency"
-                  },
-                  domProps: { value: _vm.model.currency },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                _c("div", { staticClass: "radio" }, [
+                  _c("label", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.model.currency,
+                          expression: "model.currency"
+                        }
+                      ],
+                      attrs: { type: "radio", name: "currency" },
+                      domProps: {
+                        value: 0,
+                        checked: _vm._q(_vm.model.currency, 0)
+                      },
+                      on: {
+                        change: function($event) {
+                          _vm.$set(_vm.model, "currency", 0)
+                        }
                       }
-                      _vm.$set(_vm.model, "currency", $event.target.value)
-                    }
-                  }
-                })
+                    }),
+                    _vm._v("Monero")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "radio" }, [
+                  _c("label", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.model.currency,
+                          expression: "model.currency"
+                        }
+                      ],
+                      attrs: { type: "radio", name: "currency" },
+                      domProps: {
+                        value: 1,
+                        checked: _vm._q(_vm.model.currency, 1)
+                      },
+                      on: {
+                        change: function($event) {
+                          _vm.$set(_vm.model, "currency", 1)
+                        }
+                      }
+                    }),
+                    _vm._v("Dash")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "radio" }, [
+                  _c("label", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.model.currency,
+                          expression: "model.currency"
+                        }
+                      ],
+                      attrs: { type: "radio", name: "currency" },
+                      domProps: {
+                        value: 2,
+                        checked: _vm._q(_vm.model.currency, 2)
+                      },
+                      on: {
+                        change: function($event) {
+                          _vm.$set(_vm.model, "currency", 2)
+                        }
+                      }
+                    }),
+                    _vm._v("Etherum")
+                  ])
+                ])
               ])
             : _vm._e(),
           _vm._v(" "),

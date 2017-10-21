@@ -16,7 +16,7 @@
                     <tr v-for="site in sites">
                       <td>{{ site.id }}</td>
                       <td>{{ site.name }}</td>
-                      <td>{{ site.currency }}</td>
+                      <td><span v-if="site.currency==0" >Monero</span><span v-if="site.currency==1">Dash</span><span v-if="site.currency==2">Etherum</span></td>
                       <td>{{ site.earnings }}</td>
                       <td>{{ site.authors.length }}</td>
                       <td><a :href="'/sites/' + site.id" class="btn btn-xs btn-primary btn-block">Edit</a></td>
