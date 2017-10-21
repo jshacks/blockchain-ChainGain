@@ -6,9 +6,13 @@
                 <label>Name</label>
                 <input type="text" placeholder="Name" v-model="model.name"  name="name"/>
             </div>
-            <div class="form-group">
+            <div v-if="type=='site'" class="form-group">
                 <label>Currency</label>
                 <input type="text" placeholder="Currency" v-model="model.currency"  name="currency"/>
+            </div>
+            <div v-if="type=='author'" class="form-group">
+                <label>Adress</label>
+                <input type="text" placeholder="Adress" v-model="model.adress"  name="adress"/>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -28,7 +32,7 @@
 
 <script>
 export default {
-    props: ['model', 'isEditing'],
+    props: ['model', 'type', 'isEditing'],
     created() {},
     methods: {
         saveProduct() {
