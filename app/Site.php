@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Site extends Model
 {
+
+    use \App\Traits\TokenableTrait;
+
     protected $fillable = [
         'name',
         'currency',

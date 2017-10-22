@@ -19,8 +19,6 @@ class SiteAuthorController extends Controller
         $this->middleware('auth');
     }
 
-    
-
     /**
      * Display a listing of the resource.
      *
@@ -49,8 +47,13 @@ class SiteAuthorController extends Controller
      */
     public function store(Site $site, Request $request)
     {
-        $site->authors()->create(['name' => $request->input('name')]);
-        return response()->json(['success' => true]);
+        $author = $site->authors()->create([
+            'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'percentage' => $request->input('percentage'),
+        ]);
+        $author->generateToken();
+        return response()->json(['success' => true, 'author' => $author]);
     }
 
     /**
@@ -59,9 +62,9 @@ class SiteAuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Site $site, Author $author)
     {
-        //
+        return view('authors.show', ['author' => $author]);
     }
 
     /**

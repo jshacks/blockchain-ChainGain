@@ -6,12 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+
+    use \App\Traits\TokenableTrait;
+
     protected $fillable = [
-        'name'
+        'name',
+        'address',
+        'percentage',
     ];
 
     protected $rules = [
-        'name' => 'required|unique|min:2'
+        'name' => 'required|unique|min:2',
+        'address' => 'text',
+        'percentage' => 'float',
     ];
 
     public function site()

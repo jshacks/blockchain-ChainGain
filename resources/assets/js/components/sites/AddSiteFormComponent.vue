@@ -6,9 +6,28 @@
                 <label>Name</label>
                 <input type="text" placeholder="Name" v-model="model.name"  name="name"/>
             </div>
-            <div class="form-group">
+            <div v-if="type=='site'" class="form-group">
                 <label>Currency</label>
-                <input type="text" placeholder="Currency" v-model="model.currency"  name="currency"/>
+                <div class="radio">
+                  <label><input type="radio" v-model="model.currency" v-bind:value="0" name="currency">Monero</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" v-model="model.currency" v-bind:value="1" name="currency">Dash</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" v-model="model.currency" v-bind:value="2" name="currency">Etherum</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" v-model="model.currency" v-bind:value="3" name="currency">ChainGain</label>
+                </div>
+            </div>
+            <div v-if="type=='author'" class="form-group">
+                <label>Address</label>
+                <input type="text" placeholder="Address" v-model="model.address"  name="address"/>
+            </div>
+            <div v-if="type=='author'" class="form-group">
+                <label>Percentage</label>
+                <input type="text" placeholder="Percentage" v-model="model.percentage"  name="percentage"/>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -28,7 +47,7 @@
 
 <script>
 export default {
-    props: ['model', 'isEditing'],
+    props: ['model', 'type', 'isEditing'],
     created() {},
     methods: {
         saveProduct() {
