@@ -49,6 +49,7 @@ class SiteController extends Controller
             'name' => $request->input('name'),
             'currency' => $request->input('currency')
         ]);
+        $site->generateToken();
         return [ 'success' => true, 'data' => $site ];
     }
 
