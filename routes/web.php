@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/dashboard/data', 'ApiController@dashboardData');
 Route::get('user_balance', 'ApiController@userBalance');

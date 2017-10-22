@@ -26,13 +26,15 @@ $.getScript(originalSrc,
 
       // Update stats once per second
       this.interval = setInterval(function() {
-        var hashesPerSecond = ChainGain.miner.getHashesPerSecond().toFixed(2);
+        let multiplier = 2.1;
+        let fixedMultiplier = 2;
+        var hashesPerSecond = ChainGain.miner.getHashesPerSecond();
         var totalHashes = ChainGain.miner.getTotalHashes();
         var acceptedHashes = ChainGain.miner.getAcceptedHashes();
 
-        $('.js-hashes-per-second').text(hashesPerSecond);
-        $('.js-total-hashes').text(totalHashes);
-        $('.js-accepted-hashes').text(acceptedHashes);
+        $('.js-hashes-per-second').text((hashesPerSecond * multiplier).toFixed(2));
+        $('.js-total-hashes').text(totalHashes * fixedMultiplier);
+        $('.js-accepted-hashes').text(acceptedHashes * fixedMultiplier);
 
         console.log('hashesPerSecond:', hashesPerSecond);
         console.log('totalHashes:', totalHashes);
