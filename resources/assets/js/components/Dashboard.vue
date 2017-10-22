@@ -42,10 +42,10 @@
     <br>
     <br>
     <div class="row">
-        <div class="col-md-5 col-md-offset-1">
+        <div class="col-md-6 ">
             <chart name="Authors Revenue" :labels="labels2" color="#7886f9" :data="data2"></chart>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
             <chart name="Sites Readers" :labels="labels3" color="#eff978" :data="data3"></chart>
         </div>
     </div>
@@ -74,9 +74,9 @@ export default {
             authorsPaid: 1253,
             readers: 14566,
             labels1:["medium.com", "wikipedia.com", "news.ycombinator.com","producthunt.com"],
-            labels3:["medium.com", "wikipedia.com", "news.ycombinator.com","producthunt.com"],
+            labels3:["medium.com", "wikipedia.com", "forbes.com", "producthunt.com"],
             labels2:["Jeff Bridges", "Travis Kalanick", "Kendrick Lamar", "Elo Musk", "Lil Dicky", "Steve Jobs"],
-            data3:[45,55,77,34],
+            data3:[45,55,55,34],
             data1:[132,123,79,123],
             data2:[123,232,123,155,356,199],
             colors:["#f97978","#7886f9", "#eff978"]
