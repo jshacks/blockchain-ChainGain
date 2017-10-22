@@ -13,6 +13,7 @@
                         </div>
                     @endif
                     <sites-add></sites-add>
+                    <br><br>
                     <sites-list :sites="{{$sites}}"></sites-list>
                 </div>
             </div>

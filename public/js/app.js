@@ -60566,6 +60566,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -60586,44 +60589,57 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "table-responsive" }, [
-      _c("table", { staticClass: "table table-striped" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "tbody",
-          _vm._l(_vm.sites, function(site) {
-            return _c("tr", [
-              _c("td", [_vm._v(_vm._s(site.id))]),
-              _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(site.name))]),
-              _vm._v(" "),
-              _c("td", [
-                site.currency == 0 ? _c("span", [_vm._v("Monero")]) : _vm._e(),
-                site.currency == 1 ? _c("span", [_vm._v("Dash")]) : _vm._e(),
-                site.currency == 2 ? _c("span", [_vm._v("Etherum")]) : _vm._e(),
-                site.currency == 3
-                  ? _c("span", [_vm._v("ChainGain")])
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(site.earnings))]),
-              _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(site.authors.length))]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-xs btn-primary btn-block",
-                    attrs: { href: "/sites/" + site.id }
-                  },
-                  [_vm._v("Edit")]
-                )
+    _c("div", { staticClass: "x_panel" }, [
+      _c("div", { staticClass: "x_content" }, [
+        _c("table", { staticClass: "table table-striped" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.sites, function(site) {
+              return _c("tr", [
+                _c("td", [_vm._v(_vm._s(site.id))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(site.name))]),
+                _vm._v(" "),
+                _c("td", [
+                  site.currency == 0
+                    ? _c("span", [_vm._v("Monero")])
+                    : _vm._e(),
+                  site.currency == 1 ? _c("span", [_vm._v("Dash")]) : _vm._e(),
+                  site.currency == 2
+                    ? _c("span", [_vm._v("Etherum")])
+                    : _vm._e(),
+                  site.currency == 3
+                    ? _c("span", [_vm._v("ChainGain")])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(site.earnings))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(site.authors.length))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary ",
+                      attrs: { href: "/sites/" + site.id }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fa fa-pencil",
+                        staticStyle: { "margin-right": "3px" },
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v("Edit")
+                    ]
+                  )
+                ])
               ])
-            ])
-          })
-        )
+            })
+          )
+        ])
       ])
     ])
   ])
@@ -60858,14 +60874,20 @@ var render = function() {
     _c(
       "button",
       {
-        staticClass: "btn btn-xs btn-primary pull-right",
+        staticClass: "btn btn-success pull-right",
         on: {
           click: function($event) {
             _vm.openModal()
           }
         }
       },
-      [_vm._v("Add Site")]
+      [
+        _c("i", {
+          staticClass: "fa fa-plus",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" Add Site")
+      ]
     ),
     _vm._v(" "),
     _vm.isOpened
@@ -61227,14 +61249,20 @@ var render = function() {
     _c(
       "button",
       {
-        staticClass: "btn btn-xs btn-primary pull-right",
+        staticClass: "btn btn-success pull-right",
         on: {
           click: function($event) {
             _vm.openModal()
           }
         }
       },
-      [_vm._v("Add Author")]
+      [
+        _c("i", {
+          staticClass: "fa fa-plus",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v("Add Author")
+      ]
     ),
     _vm._v(" "),
     _vm.isOpened
@@ -61396,6 +61424,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -61453,7 +61482,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Address")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Percentage")])
+        _c("th", [_vm._v("Percentage")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Actions")])
       ])
     ])
   },
@@ -61462,7 +61493,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("td", [
-      _c("button", { staticClass: "btn btn-xs btn-primary btn-block" }, [
+      _c("button", { staticClass: "btn btn-primary " }, [
+        _c("i", {
+          staticClass: "fa fa-pencil",
+          attrs: { "aria-hidden": "true" }
+        }),
         _vm._v("Edit")
       ])
     ])
@@ -61611,30 +61646,47 @@ var render = function() {
     [
       _c("div", { staticClass: "modal-body" }, [
         _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", [_vm._v("Name")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.model.name,
-                  expression: "model.name"
-                }
-              ],
-              attrs: { type: "text", placeholder: "Name", name: "name" },
-              domProps: { value: _vm.model.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-md-12 col-sm-6 col-xs-12 form-group has-feedback"
+            },
+            [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.model.name,
+                    expression: "model.name"
                   }
-                  _vm.$set(_vm.model, "name", $event.target.value)
+                ],
+                staticClass: "form-control has-feedback-left",
+                attrs: {
+                  type: "text",
+                  name: "name",
+                  id: "inputSuccess2",
+                  placeholder: "Name"
+                },
+                domProps: { value: _vm.model.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.model, "name", $event.target.value)
+                  }
                 }
-              }
-            })
-          ]),
+              }),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "fa fa-user form-control-feedback left",
+                staticStyle: { "margin-top": "0px" },
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          ),
           _vm._v(" "),
           _vm.type == "site"
             ? _c("div", { staticClass: "form-group" }, [
@@ -61747,65 +61799,91 @@ var render = function() {
             : _vm._e(),
           _vm._v(" "),
           _vm.type == "author"
-            ? _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Address")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.model.address,
-                      expression: "model.address"
-                    }
-                  ],
-                  attrs: {
-                    type: "text",
-                    placeholder: "Address",
-                    name: "address"
-                  },
-                  domProps: { value: _vm.model.address },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "col-md-12 col-sm-6 col-xs-12 form-group has-feedback"
+                },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.model.address,
+                        expression: "model.address"
                       }
-                      _vm.$set(_vm.model, "address", $event.target.value)
+                    ],
+                    staticClass: "form-control has-feedback-left",
+                    attrs: {
+                      type: "text",
+                      name: "name",
+                      id: "inputSuccess2",
+                      placeholder: "Address"
+                    },
+                    domProps: { value: _vm.model.address },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.model, "address", $event.target.value)
+                      }
                     }
-                  }
-                })
-              ])
+                  }),
+                  _vm._v(" "),
+                  _c("span", {
+                    staticClass: "fa fa-user form-control-feedback left",
+                    staticStyle: { "margin-top": "0px" },
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
             : _vm._e(),
           _vm._v(" "),
           _vm.type == "author"
-            ? _c("div", { staticClass: "form-group" }, [
-                _c("label", [_vm._v("Percentage")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.model.percentage,
-                      expression: "model.percentage"
-                    }
-                  ],
-                  attrs: {
-                    type: "text",
-                    placeholder: "Percentage",
-                    name: "percentage"
-                  },
-                  domProps: { value: _vm.model.percentage },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "col-md-12 col-sm-6 col-xs-12 form-group has-feedback"
+                },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.model.percentage,
+                        expression: "model.percentage"
                       }
-                      _vm.$set(_vm.model, "percentage", $event.target.value)
+                    ],
+                    staticClass: "form-control has-feedback-left",
+                    attrs: {
+                      type: "text",
+                      name: "name",
+                      id: "inputSuccess2",
+                      placeholder: "Percentage"
+                    },
+                    domProps: { value: _vm.model.percentage },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.model, "percentage", $event.target.value)
+                      }
                     }
-                  }
-                })
-              ])
+                  }),
+                  _vm._v(" "),
+                  _c("span", {
+                    staticClass: "fa fa-user form-control-feedback left",
+                    staticStyle: { "margin-top": "0px" },
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
             : _vm._e()
         ]),
         _vm._v(" "),
@@ -61824,8 +61902,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-footer" }, [
       _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12" }, [
         _c("div", { staticClass: "form-group new-button" }, [
-          _c("button", { staticClass: "button" }, [
-            _c("i", { staticClass: "fa fa-pencil" }),
+          _c("button", { staticClass: "btn btn-success pull-right" }, [
+            _c("i", {
+              staticClass: "fa fa-plus",
+              attrs: { "aria-hidden": "true" }
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("Add Site")])
           ])
