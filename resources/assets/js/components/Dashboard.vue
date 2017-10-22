@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Total Hashrate</div>
                 <div class="panel-body">
-                    <h2>sss</h2></div>
+                    <h2>{{hashrate}}</h2></div>
             </div>
         </div>
         <div class="col-md-2">
@@ -69,13 +69,12 @@ export default {
         axios.get('/dashboard/data').then(response => {
             let data = response.data;
             this.revenue = data.revenue;
-            this.hashrate = data.hashrate;
         })
     },
     data: function() {
         return {
             revenue: "",
-            hashrate: "",
+            hashrate: "200 H/s",
             paid: 500,
             nr: 50,
             authorsPaid: 1250,
