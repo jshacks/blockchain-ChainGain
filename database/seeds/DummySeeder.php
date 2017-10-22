@@ -11,10 +11,13 @@ class DummySeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Author::class, 50)->create()->each(function ($u) {
-            $u->generateToken();
-            $u->site_id = rand(18, 21);
-            $u->save();
-        });
+        foreach(App\Site::all() as $site){
+            $noOfUsers = rand(10, 30);
+            factory(App\Author::class, $noOfUsers)->create()->each(function ($u) use ($site){
+                $u->generateToken();
+                $u->site_id = $site->id;
+                $u->save();
+            });
+        }
     }
 }
