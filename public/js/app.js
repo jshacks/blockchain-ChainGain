@@ -78661,7 +78661,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -78676,23 +78676,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_chartjs__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_chartjs__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -78754,7 +78737,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             revenue: "",
             hashrate: "200 H/s",
-            paid: 500,
             nr: 50,
             authorsPaid: 1250,
             readers: 14500,
@@ -78780,74 +78762,68 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "dashboard" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [
-            _vm._v("Total Revenue")
+    _c("div", { staticClass: "row tile_count" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.revenue))]),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
+        [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.hashrate))]),
+          _vm._v(" "),
+          _vm._m(3)
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
+        [
+          _vm._m(4),
+          _vm._v(" "),
+          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.nr))]),
+          _vm._v(" "),
+          _vm._m(5)
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
+        [
+          _vm._m(6),
+          _vm._v(" "),
+          _c("div", { staticClass: "count" }, [
+            _vm._v(_vm._s(_vm.authorsPaid))
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.revenue) + "$")])
-          ])
-        ])
-      ]),
+          _vm._m(7)
+        ]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [
-            _vm._v("Total Hashrate")
-          ]),
+      _c(
+        "div",
+        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
+        [
+          _vm._m(8),
           _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.hashrate))])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [_vm._v("Total Paid")]),
+          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.readers))]),
           _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.paid) + "$")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [
-            _vm._v("Nr of Authors")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.nr) + "$")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [_vm._v("Paid Authors")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.authorsPaid) + "$")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [
-            _vm._v("Total Readers")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.readers))])
-          ])
-        ])
-      ])
+          _vm._m(9)
+        ]
+      )
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
@@ -78901,7 +78877,110 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_top" }, [
+      _c("i", { staticClass: "fa fa-money" }),
+      _vm._v(" Total revenue")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_bottom" }, [
+      _c("i", { staticClass: "green" }, [_vm._v("4% ")]),
+      _vm._v(" From last Week")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_top" }, [
+      _c("i", { staticClass: "fa fa-line-chart" }),
+      _vm._v(" Total Hashrate")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_bottom" }, [
+      _c("i", { staticClass: "green" }, [
+        _c("i", { staticClass: "fa fa-sort-asc" }),
+        _vm._v("3% ")
+      ]),
+      _vm._v(" From last Week")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_top" }, [
+      _c("i", { staticClass: "fa fa-user" }),
+      _vm._v(" Nr of Authors")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_bottom" }, [
+      _c("i", { staticClass: "green" }, [
+        _c("i", { staticClass: "fa fa-sort-asc" }),
+        _vm._v("23% ")
+      ]),
+      _vm._v(" From last Week")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_top" }, [
+      _c("i", { staticClass: "fa fa-user" }),
+      _vm._v(" Paid Authors")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_bottom" }, [
+      _c("i", { staticClass: "green" }, [
+        _c("i", { staticClass: "fa fa-sort-asc" }),
+        _vm._v("13% ")
+      ]),
+      _vm._v(" From last Week")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_top" }, [
+      _c("i", { staticClass: "fa fa-user" }),
+      _vm._v(" Paid Readers")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "count_bottom" }, [
+      _c("i", { staticClass: "green" }, [
+        _c("i", { staticClass: "fa fa-sort-asc" }),
+        _vm._v("13% ")
+      ]),
+      _vm._v(" From last Week")
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
