@@ -1,47 +1,30 @@
 <template>
 <div class="dashboard">
-    <div class="row">
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Total Revenue</div>
-                <div class="panel-body">
-                    <h2>{{revenue}}$</h2></div>
-            </div>
+    <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-money"></i> Total revenue</span>
+              <div class="count">{{revenue}}</div>
+              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
         </div>
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Total Hashrate</div>
-                <div class="panel-body">
-                    <h2>{{revenue}}$</h2></div>
-            </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-line-chart"></i> Total Hashrate</span>
+              <div class="count">{{hashrate}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
         </div>
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Total Paid</div>
-                <div class="panel-body">
-                    <h2>{{paid}}$</h2></div>
-            </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Nr of Authors</span>
+              <div class="count">{{nr}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>23% </i> From last Week</span>
         </div>
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Nr of Authors</div>
-                <div class="panel-body">
-                    <h2>{{nr}}$</h2></div>
-            </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Paid Authors</span>
+              <div class="count">{{authorsPaid}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
         </div>
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Paid Authors</div>
-                <div class="panel-body">
-                    <h2>{{authorsPaid}}$</h2></div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Total Readers</div>
-                <div class="panel-body">
-                    <h2>{{readers}}</h2></div>
-            </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Paid Readers</span>
+              <div class="count">{{readers}}</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
         </div>
     </div>
     <div class="row">
@@ -69,14 +52,12 @@ export default {
         axios.get('/dashboard/data').then(response => {
             let data = response.data;
             this.revenue = data.revenue;
-            this.hashrate = data.hashrate;
         })
     },
     data: function() {
         return {
             revenue: "",
-            hashrate: "",
-            paid: 500,
+            hashrate: "200 H/s",
             nr: 50,
             authorsPaid: 1250,
             readers: 14500,
