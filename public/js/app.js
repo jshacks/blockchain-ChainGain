@@ -78661,7 +78661,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -78676,6 +78676,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_chartjs__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_chartjs__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -78763,70 +78772,42 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "dashboard" }, [
     _c("div", { staticClass: "row tile_count" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.revenue))]),
-          _vm._v(" "),
-          _vm._m(1)
-        ]
-      ),
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("div", {
+          staticClass: "col-md-12 col-sm-4 col-xs-6 tile_stats_count"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.revenue))]),
+            _vm._v(" "),
+            _vm._m(1)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count"
+          },
+          [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.hashrate))]),
+            _vm._v(" "),
+            _vm._m(3)
+          ]
+        )
+      ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
-        [
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.hashrate))]),
-          _vm._v(" "),
-          _vm._m(3)
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
-        [
-          _vm._m(4),
-          _vm._v(" "),
-          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.nr))]),
-          _vm._v(" "),
-          _vm._m(5)
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
-        [
-          _vm._m(6),
-          _vm._v(" "),
-          _c("div", { staticClass: "count" }, [
-            _vm._v(_vm._s(_vm.authorsPaid))
-          ]),
-          _vm._v(" "),
-          _vm._m(7)
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-2 col-sm-4 col-xs-6 tile_stats_count" },
-        [
-          _vm._m(8),
-          _vm._v(" "),
-          _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.readers))]),
-          _vm._v(" "),
-          _vm._m(9)
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
       _c(
         "div",
         { staticClass: "col-md-4" },
@@ -78843,9 +78824,61 @@ var render = function() {
         1
       ),
       _vm._v(" "),
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("div", {
+          staticClass: "col-md-2  col-sm-4 col-xs-6 tile_stats_count"
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-md-10 col-sm-4 col-xs-6 tile_stats_count" },
+          [
+            _vm._m(4),
+            _vm._v(" "),
+            _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.nr))]),
+            _vm._v(" "),
+            _vm._m(5)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count"
+          },
+          [
+            _vm._m(6),
+            _vm._v(" "),
+            _c("div", { staticClass: "count" }, [
+              _vm._v(_vm._s(_vm.authorsPaid))
+            ]),
+            _vm._v(" "),
+            _vm._m(7)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count"
+          },
+          [
+            _vm._m(8),
+            _vm._v(" "),
+            _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.readers))]),
+            _vm._v(" "),
+            _vm._m(9)
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-md-4" },
+        { staticClass: "col-md-4 col-md-offset-2" },
         [
           _c("chart", {
             attrs: {
