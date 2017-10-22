@@ -11,3 +11,44 @@
 @import "font-awesome.min.css";
 
 @import "custom.css";
+
+
+#app{
+  .navbar-header{
+    background: #fff;
+  }
+  nav.navbar{
+    a.logo{
+      img{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 80px;
+      }
+    }
+    .navbar-right{
+      margin-top: 14px;
+    }
+  }
+  .currencies-toggle{
+    .radio{
+      position: relative;
+      display: block;
+      height: 130px;
+      margin: 10px 25px;
+      float: left;
+      label{
+        text-align: center;
+        padding-left: 0;
+      }
+      input{
+        display: block;
+        margin-left: 34px;
+      }
+      img{
+        display: block;
+        max-width: 80px;
+        margin: 0;
+      }
+    }
+  }
+}

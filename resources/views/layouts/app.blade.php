@@ -17,7 +17,7 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header" style="background:#fff;">
+                <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -28,7 +28,7 @@
 
                     <!-- Branding Image -->
                     <a class="logo" href="{{ url('/') }}">
-                        <img src="{{ asset('/logo.png') }}" height="80" alt="">
+                        <img src="{{ asset('/logo.png') }}" alt="">
                     </a>
                 </div>
 

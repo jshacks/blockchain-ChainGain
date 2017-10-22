@@ -12667,3 +12667,41 @@ button.close {
   }
 }
 
+#app .navbar-header {
+  background: #fff;
+}
+
+#app nav.navbar a.logo img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 80px;
+}
+
+#app nav.navbar .navbar-right {
+  margin-top: 14px;
+}
+
+#app .currencies-toggle .radio {
+  position: relative;
+  display: block;
+  height: 130px;
+  margin: 10px 25px;
+  float: left;
+}
+
+#app .currencies-toggle .radio label {
+  text-align: center;
+  padding-left: 0;
+}
+
+#app .currencies-toggle .radio input {
+  display: block;
+  margin-left: 34px;
+}
+
+#app .currencies-toggle .radio img {
+  display: block;
+  max-width: 80px;
+  margin: 0;
+}
+

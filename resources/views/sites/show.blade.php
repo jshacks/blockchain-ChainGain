@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Site {{$site->name}}</div>
+                <div class="panel-heading">Site info</div>
                 <div class="panel-body">
-                    <h4>General Mining code</h4>
+                    <h2 class='text-center'>{{$site->name}}</h2>
                     <div class="form-group">
                         <textarea class="form-control" style="width:100%;height: 120px;">{{$site->code}}</textarea>
                     </div>
