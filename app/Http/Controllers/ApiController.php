@@ -11,6 +11,7 @@ class ApiController extends Controller
     protected $url ='https://api.coinhive.com';
     public $credentials;
     public $httpClientHandler;
+    public $moneroUSD = 88.16391375;
 
     public function __construct()
     {
@@ -24,6 +25,18 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json',
             ],
         ]);
+    }
+
+    public function dashboardData(Request $request)
+    {
+        $data = [];
+
+        $statsSite = $this->statsSite($request);
+        $xmrPending = $statsSite['xmrPending'];
+        $revenue = $this->moneroUSD * $xmrPending * 50;
+        $data['revenue'] = $revenue;
+
+        return response()->json($data);
     }
 
     public function userBalance(Request $request)
