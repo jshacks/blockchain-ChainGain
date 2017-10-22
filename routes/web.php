@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard/data', 'ApiController@dashboardData');
 Route::get('user_balance', 'ApiController@userBalance');
 Route::get('stats_site', 'ApiController@statsSite');
 
