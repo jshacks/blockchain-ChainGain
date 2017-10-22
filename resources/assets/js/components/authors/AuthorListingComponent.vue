@@ -8,6 +8,7 @@
                       <th>Name</th>
                       <th>Address</th>
                       <th>Percentage</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -16,7 +17,7 @@
                       <td>{{ author.name }}</td>
                       <td>{{ author.address }}</td>
                       <td>{{ author.percentage }}</td>
-                      <td><button class="btn btn-xs btn-primary btn-block">Edit</button></td>
+                      <td><button class="btn btn-primary "><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button></td>
                     </tr>
                   </tbody>
                 </table>

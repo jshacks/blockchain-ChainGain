@@ -1,6 +1,6 @@
 <template>
 <div class="modal-open">
-    <button v-on:click="openModal()" class="btn btn-xs btn-primary pull-right">Add Site</button>
+    <button v-on:click="openModal()" class="btn btn-success pull-right"><i class="fa fa-plus" aria-hidden="true"></i> Add Site</button>
     <!-- Modal -->
     <div v-if="isOpened" class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document" style="margin-top:90px;">

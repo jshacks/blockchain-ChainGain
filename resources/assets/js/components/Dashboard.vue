@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
                   <span class="count_top"><i class="fa fa-money"></i> Total revenue</span>
-                  <div class="count">{{revenue}}</div>
+                  <div class="count">{{revenue}} $</div>
                   <span class="count_bottom"><i class="green">4% </i> From last Week</span>
             </div>
             <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -28,11 +28,11 @@
                     </div>
                     <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
                           <span class="count_top"><i class="fa fa-user"></i> Paid Authors</span>
-                          <div class="count">{{authorsPaid}}</div>
+                          <div class="count">{{authorsPaid}} $</div>
                           <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
                     </div>
                     <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
-                          <span class="count_top"><i class="fa fa-user"></i> Paid Readers</span>
+                          <span class="count_top"><i class="fa fa-user"></i> Total Readers</span>
                           <div class="count">{{readers}}</div>
                           <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
                     </div>
@@ -61,6 +61,7 @@ export default {
         axios.get('/dashboard/data').then(response => {
             let data = response.data;
             this.revenue = data.revenue;
+            this.revenue = this.revenue.toString().substring(0, 6);
         })
     },
     data: function() {
