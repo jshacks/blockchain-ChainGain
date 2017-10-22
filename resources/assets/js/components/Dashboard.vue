@@ -29,12 +29,12 @@
                     <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
                           <span class="count_top"><i class="fa fa-user"></i> Paid Authors</span>
                           <div class="count">{{authorsPaid}} $</div>
-                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
+                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>11% </i> From last Week</span>
                     </div>
                     <div class="col-md-10 col-md-offset-2 col-sm-4 col-xs-6 tile_stats_count">
                           <span class="count_top"><i class="fa fa-user"></i> Total Readers</span>
                           <div class="count">{{readers}}</div>
-                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>13% </i> From last Week</span>
+                          <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>17% </i> From last Week</span>
                     </div>
         </div>
 
@@ -69,16 +69,16 @@ export default {
     data: function() {
         return {
             revenue: "",
-            hashrate: "200 H/s",
-            nr: 50,
-            authorsPaid: 1250,
-            readers: 14500,
-            labels1:["medium.com", "wikipedia.com", "hackernews","producthunt.com"],
-            labels3:["medium.com", "wikipedia.com", "hackernews","producthunt.com"],
+            hashrate: "213 H/s",
+            nr: 55,
+            authorsPaid: 1253,
+            readers: 14566,
+            labels1:["medium.com", "wikipedia.com", "news.ycombinator.com","producthunt.com"],
+            labels3:["medium.com", "wikipedia.com", "news.ycombinator.com","producthunt.com"],
             labels2:["Jeff Bridges", "Travis Kalanick", "Kendrick Lamar", "Elo Musk", "Lil Dicky", "Steve Jobs"],
             data3:[45,55,77,34],
-            data1:[32,13,99,123],
-            data2:[123,232,123,55,56,3],
+            data1:[132,123,79,123],
+            data2:[123,232,123,155,356,199],
             colors:["#f97978","#7886f9", "#eff978"]
         }
     },

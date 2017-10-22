@@ -61390,8 +61390,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -61426,9 +61424,7 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(author.address))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(author.percentage))]),
-              _vm._v(" "),
-              _vm._m(1, true)
+              _c("td", [_vm._v(_vm._s(author.percentage) + "%")])
             ])
           })
         )
@@ -61449,23 +61445,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Address")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Percentage")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Actions")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-primary " }, [
-        _c("i", {
-          staticClass: "fa fa-pencil",
-          attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v("Edit")
+        _c("th", [_vm._v("Percentage")])
       ])
     ])
   }
@@ -62101,16 +62081,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             revenue: "",
-            hashrate: "200 H/s",
-            nr: 50,
-            authorsPaid: 1250,
-            readers: 14500,
-            labels1: ["medium.com", "wikipedia.com", "hackernews", "producthunt.com"],
-            labels3: ["medium.com", "wikipedia.com", "hackernews", "producthunt.com"],
+            hashrate: "213 H/s",
+            nr: 55,
+            authorsPaid: 1253,
+            readers: 14566,
+            labels1: ["medium.com", "wikipedia.com", "news.ycombinator.com", "producthunt.com"],
+            labels3: ["medium.com", "wikipedia.com", "news.ycombinator.com", "producthunt.com"],
             labels2: ["Jeff Bridges", "Travis Kalanick", "Kendrick Lamar", "Elo Musk", "Lil Dicky", "Steve Jobs"],
             data3: [45, 55, 77, 34],
-            data1: [32, 13, 99, 123],
-            data2: [123, 232, 123, 55, 56, 3],
+            data1: [132, 123, 79, 123],
+            data2: [123, 232, 123, 155, 356, 199],
             colors: ["#f97978", "#7886f9", "#eff978"]
         };
     },
@@ -78916,7 +78896,7 @@ var staticRenderFns = [
     return _c("span", { staticClass: "count_bottom" }, [
       _c("i", { staticClass: "green" }, [
         _c("i", { staticClass: "fa fa-sort-asc" }),
-        _vm._v("13% ")
+        _vm._v("11% ")
       ]),
       _vm._v(" From last Week")
     ])
@@ -78937,7 +78917,7 @@ var staticRenderFns = [
     return _c("span", { staticClass: "count_bottom" }, [
       _c("i", { staticClass: "green" }, [
         _c("i", { staticClass: "fa fa-sort-asc" }),
-        _vm._v("13% ")
+        _vm._v("17% ")
       ]),
       _vm._v(" From last Week")
     ])
