@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('bal', 'ApiController@balance');
+Route::get('user_balance', 'ApiController@userBalance');
+Route::get('stats_site', 'ApiController@statsSite');
 
 Route::resource('sites', 'SiteController');
 Route::resource('sites.authors', 'SiteAuthorController');

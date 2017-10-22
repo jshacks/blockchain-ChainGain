@@ -26,7 +26,7 @@ class ApiController extends Controller
         ]);
     }
 
-    public function balance(Request $request)
+    public function userBalance(Request $request)
     {
         $user = $request->input('user');
 
@@ -45,7 +45,26 @@ class ApiController extends Controller
         }
 
         return $response;
+    }
 
+    public function statsSite(Request $request)
+    {
+        $url = "/stats/site";
+
+        $body = [
+            'secret' => 'ljO0R5aCsaYsUEmQuTFFhl4nBaC9Xzc8'
+        ];
+
+        try{
+            $response = $this->httpClientHandler->request('GET', $url, [
+                'query' => $body,
+            ]);
+            $response = json_decode($response->getBody(), true);
+        }catch (Exception $e){
+            $response = $e->getResponse();
+        }
+
+        return $response;
     }
 
 }
