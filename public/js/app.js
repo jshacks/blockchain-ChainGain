@@ -78661,7 +78661,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -78739,6 +78739,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/dashboard/data').then(function (response) {
             var data = response.data;
             _this.revenue = data.revenue;
+            _this.revenue = _this.revenue.toString().substring(0, 6);
         });
     },
 
@@ -78786,7 +78787,9 @@ var render = function() {
           [
             _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "count" }, [_vm._v(_vm._s(_vm.revenue))]),
+            _c("div", { staticClass: "count" }, [
+              _vm._v(_vm._s(_vm.revenue) + " $")
+            ]),
             _vm._v(" "),
             _vm._m(1)
           ]
@@ -78851,7 +78854,7 @@ var render = function() {
             _vm._m(6),
             _vm._v(" "),
             _c("div", { staticClass: "count" }, [
-              _vm._v(_vm._s(_vm.authorsPaid))
+              _vm._v(_vm._s(_vm.authorsPaid) + " $")
             ]),
             _vm._v(" "),
             _vm._m(7)
@@ -78998,7 +79001,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "count_top" }, [
       _c("i", { staticClass: "fa fa-user" }),
-      _vm._v(" Paid Readers")
+      _vm._v(" Total Readers")
     ])
   },
   function() {
