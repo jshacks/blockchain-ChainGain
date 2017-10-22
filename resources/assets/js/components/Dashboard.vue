@@ -39,11 +39,13 @@
         </div>
 
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-md-5 col-md-offset-1">
             <chart name="Authors Revenue" :labels="labels2" color="#7886f9" :data="data2"></chart>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <chart name="Sites Readers" :labels="labels3" color="#eff978" :data="data3"></chart>
         </div>
     </div>
@@ -71,9 +73,9 @@ export default {
             nr: 50,
             authorsPaid: 1250,
             readers: 14500,
-            labels3:["xxx.com","yyy.net","pornhub.ro","adrianthedev.ro"],
-            labels1:["xxx.com","yyy.net","pornhub.ro","adrianthedev.ro"],
-            labels2:["Ion","Dan","Stefan","Adrian","Gigi","Vali"],
+            labels1:["medium.com", "wikipedia.com", "hackernews","producthunt.com"],
+            labels3:["medium.com", "wikipedia.com", "hackernews","producthunt.com"],
+            labels2:["Jeff Bridges", "Travis Kalanick", "Kendrick Lamar", "Elo Musk", "Lil Dicky", "Steve Jobs"],
             data3:[45,55,77,34],
             data1:[32,13,99,123],
             data2:[123,232,123,55,56,3],
