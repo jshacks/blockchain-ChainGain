@@ -60560,8 +60560,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -60604,8 +60602,6 @@ var render = function() {
               site.currency == 3 ? _c("span", [_vm._v("ChainGain")]) : _vm._e()
             ]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(site.earnings))]),
-            _vm._v(" "),
             _c("td", [_vm._v(_vm._s(site.authors.length))])
           ])
         })
@@ -60625,8 +60621,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
         _c("th", [_vm._v("Currency")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Earnings")]),
         _vm._v(" "),
         _c("th", [_vm._v("Nr. of authors")])
       ])
@@ -60875,7 +60869,7 @@ var render = function() {
               "div",
               {
                 staticClass: "modal-dialog",
-                staticStyle: { "margin-top": "90px" },
+                staticStyle: { "margin-top": "-100px", top: "50%" },
                 attrs: { role: "document" }
               },
               [
@@ -61250,7 +61244,7 @@ var render = function() {
               "div",
               {
                 staticClass: "modal-dialog",
-                staticStyle: { "margin-top": "90px" },
+                staticStyle: { "margin-top": "-100px", top: "50%" },
                 attrs: { role: "document" }
               },
               [

@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <h2 class='text-center'>{{$site->name}}</h2>
                     <div class="form-group">
-                        <textarea class="form-control" style="width:100%;height: 120px;">{{$site->code}}</textarea>
+                        <textarea class="form-control" 	onclick="this.focus();this.select()" style="width:100%;height: 120px;">{{$site->code}}</textarea>
                     </div>
                     <authors :id="{{ $site->id }}" :authors="{{ $site->authors }}"></authors>
                 </div>
